@@ -73,7 +73,7 @@ function Chat({ socket, username, room, prevData}) {
   };
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/users").then((response) => {
+    Axios.get("/users").then((response) => {
       for(let i=0;i<response.data.length;i++){
         setMessageList((list) => [...list, response.data[i]]);
       }
